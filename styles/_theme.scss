@@ -1,0 +1,80 @@
+@mixin theme {
+    .theme {
+        &_color {
+            &_project-default {
+                $bg: (
+                    "default": #FFFFFF,
+                    "accent": #ffcc00,
+                    "border": #000000
+                );
+                $text: (
+                    "main": #000000,
+                    "scnd": rgba(0, 0, 0, 0.6),
+                    "add": rgba(0, 0, 0, 0.3),
+                    "link": #0077FF
+                );
+            }
+    
+            &_project-brand {
+                $bg: (
+                    "default": #0077FF,
+                    "accent": #FFFFFF,
+                    "border": #FFFFFF
+                );
+                $text: (
+                    "main": #FFFFFF,
+                    "scnd": rgba(255, 255, 255, .6),
+                    "add": rgba(255, 255, 255, .3),
+                    "link": #FFFFFF
+                );
+            }
+    
+            &_project-inverse {
+                $bg: (
+                    "default": #000000,
+                    "accent": #FFFFFF,
+                    "border": #FFFFFF
+                );
+                $text: (
+                    "main": #FFFFFF,
+                    "scnd": rgba(255, 255, 255, .6),
+                    "add": rgba(255, 255, 255, .3),
+                    "link": #0070F0
+                );
+            }
+    
+            &_project-warning {
+                $bg: (
+                    "default": #FF3333,
+                    "accent": #FFFFFF,
+                    "border": #FF3333
+                );
+                $text: (
+                    "main": #FFFFFF,
+                    "scnd": rgba(255, 255, 255, .6),
+                    "add": rgba(255, 255, 255, .3),
+                    "link": #FFFFFF
+                );
+            }
+        }
+
+        &_size {
+            &_default {
+                $font_size: (
+                    "s": 7px,
+                    "m": 8px,
+                    "l": 10px,
+                    "xl": 11px,
+                    "xxl": 13px
+                );
+                $font_space: (
+                    "s": 18px,
+                    "m": 21px,
+                    "l": 25px,
+                    "xl": 28px,
+                    "xxl": 34px
+                )
+            }
+        }
+    }
+}
