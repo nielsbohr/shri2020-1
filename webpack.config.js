@@ -19,10 +19,10 @@ module.exports = {
             // MiniCssExtractPlugin.loader,
             'css-loader',
             {
-                loader: 'sass-loader',
-                options: {
-                    implementation: require('sass'),
-                }
+              loader: 'sass-loader',
+              options: {
+                  implementation: require('sass'),
+              }
             }
           ],
         },

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack index.js",
+    "start": "set NODE_ENV=production && npx webpack index.js",
     "dev": "npx webpack-dev-server index.js"
   },
   "author": "",

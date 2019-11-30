@@ -1,6 +1,14 @@
 @use 'sass:map';
-@use 'theme';
+@import 'theme';
 
 :root{
     box-sizing: border-box;
+}
+
+.product {
+    background: map-get(map-get($theme-colors, "bg"), "accent");
+}
+
+.warning {
+    background: map-get(map-get($theme-colors, "bg"), "accent");
 }
