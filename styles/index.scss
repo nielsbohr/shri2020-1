@@ -6,9 +6,9 @@
 }
 
 .product {
-    background: map-get(map-get($theme-colors, "bg"), "accent");
+    background: var(--bg-accent);
 }
 
 .warning {
-    background: map-get(map-get($theme-colors, "bg"), "accent");
+    background: var(--bg-accent);
 }

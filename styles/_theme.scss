@@ -1,118 +1,77 @@
-$theme-colors: (
-    "bg": (
-        "default": #FFFFFF,
-        "accent": #ffcc00,
-        "border": #000000
-    ),
-    "text": (
-        "main": #000000,
-        "scnd": rgba(0, 0, 0, 0.6),
-        "add": rgba(0, 0, 0, 0.3),
-        "link": #0077FF
-    )
-) !default;
-
-$theme-sizes: (
-    "font-size": (
-        "s": 7px,
-        "m": 8px,
-        "l": 10px,
-        "xl": 11px,
-        "xxl": 13px 
-    ),
-    "font-space": (
-        "s": 18px,
-        "m": 21px,
-        "l": 25px,
-        "xl": 28px,
-        "xxl": 34px
-    )
-) !default;
-
 .theme {
-    &_color {
+    &_color {   
         &_project-default {
-            $theme-colors: (
-                "bg": (
-                    "default": #FFFFFF,
-                    "accent": #ffcc00,
-                    "border": #000000
-                ),
-                "text": (
-                    "main": #000000,
-                    "scnd": rgba(0, 0, 0, 0.6),
-                    "add": rgba(0, 0, 0, 0.3),
-                    "link": #0077FF
-                )
-            );
+            --bg-default: #FFFFFF;
+            --bg-accent: #FFCC00;
+            --bg-border: #000000;
+            //
+            --text-main: #000000;
+            --text-scnd: rgba(0, 0, 0, 0.6);
+            --text-add: rgba(0, 0, 0, 0.3);
+            --text-link: #0077FF;
         }
         &_project-brand {
-            $theme-colors: (
-                "bg": (
-                    "default": #0077FF,
-                    "accent": #FFFFFF,
-                    "border": #FFFFFF
-                ),
-                "text": (
-                    "main": #FFFFFF,
-                    "scnd": rgba(255, 255, 255, 0.6),
-                    "add": rgba(255, 255, 255, 0.3),
-                    "link": #FFFFFF
-                )
-            );
+            --bg-default: #0077FF;
+            --bg-accent: #FFFFFF;
+            --bg-border: #FFFFFF;
+            //
+            --text-main: #FFFFFF;
+            --text-scnd: rgba(255, 255, 255, 0.6);
+            --text-add: rgba(255, 255, 255, 0.3);
+            --text-link: #FFFFFF;
         }
 
         &_project-inverse {
-            $theme-colors: (
-                "bg": (
-                    "default": #000000,
-                    "accent": #FFFFFF,
-                    "border": #FFFFFF
-                ),
-                "text": (
-                    "main": #FFFFFF,
-                    "scnd": rgba(255, 255, 255, .6),
-                    "add": rgba(255, 255, 255, .3),
-                    "link": #0070F0
-                )
-            );
+            --bg-default: #000000;
+            --bg-accent: #FFFFFF;
+            --bg-border: #FFFFFF;
+            //
+            --text-main: #FFFFFF;
+            --text-scnd: rgba(255, 255, 255, .6);
+            --text-add: rgba(255, 255, 255, .3);
+            --text-link: #0070F0;
         }
 
         &_project-warning {
-            $theme-colors: (
-                "bg": (
-                    "default": #FF3333,
-                    "accent": #FFFFFF,
-                    "border": #FF3333
-                ),
-                "text": (
-                    "main": #FFFFFF,
-                    "scnd": rgba(255, 255, 255, .6),
-                    "add": rgba(255, 255, 255, .3),
-                    "link": #FFFFFF
-                )
-            );
+            --bg-default: #FF3333;
+            --bg-accent: #FFFFFF;
+            --bg-border: #FF3333;
+            //
+            --text-main: #FFFFFF;
+            --text-scnd: rgba(255, 255, 255, 0.6);
+            --text-add: rgba(255, 255, 255, 0.3);
+            --text-link: #FFFFFF;
         }
     }
 
     &_size {
         &_default {
-            $theme-sizes: (
-                "font-size": (
-                    "s": 7px,
-                    "m": 8px,
-                    "l": 10px,
-                    "xl": 11px,
-                    "xxl": 13px 
-                ),
-                "font-space": (
-                    "s": 18px,
-                    "m": 21px,
-                    "l": 25px,
-                    "xl": 28px,
-                    "xxl": 34px
-                )
-            );
+            --font-size-s: 7px;
+            --font-size-m: 8px;
+            --font-size-l: 10px;
+            --font-size-xl: 11px;
+            --font-size-xxl: 13px;
+            --font-space-s: 18px;
+            --font-space-m: 21px;
+            --font-space-l: 25px;
+            --font-space-xl: 28px;
+            --font-space-xxl: 34px;
+        }
+    }
+
+    &_space {
+        &_default {
+            --space-xxxs: 3px;
+            --space-xxs: 6px;
+            --space-xs: 9px;
+            --space-s: 15px;
+            --space-m: 18px;
+            --space-l: 24px;
+            --space-xl: 27px;
+            --space-xxl: 36px;
+            --space-xxxl: 45px;
+            --space-xxxxl: 51px;
+            --space-xxxxxl: 72px;
         }
     }
 }
