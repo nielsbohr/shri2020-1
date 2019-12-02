@@ -134,134 +134,34 @@
         }
 
         &_indent-b {
-            &_xxxs {
-                margin-bottom: var(--space-xxxs);
-            }
+            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
 
-            &_xxs {
-                margin-bottom: var(--space-xxs);
-            }
-
-            &_s {
-                margin-bottom: var(--space-s);
-            }
-
-            &_m {
-                margin-bottom: var(--space-m);
-            }
-
-            &_l {
-                margin-bottom: var(--space-l);
-            }
-
-            &_xl {
-                margin-bottom: var(--space-xl);
-            }
-
-            &_xxl {
-                margin-bottom: var(--space-xxl);
-            }
-
-            &_xxxl {
-                margin-bottom: var(--space-xxxl);
-            }
-
-            &_xxxxl {
-                margin-bottom: var(--space-xxxxl);
+            @each $size in $sizes {
+                &_#{$size} {
+                    margin-bottom: var(--space-#{$size});
+                }
             }
         }
 
         &_space-h {
-            &_xxxs {
-                padding-right: var(--space-xxxs);
-                padding-left: var(--space-xxxs);
-            }
+            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
 
-            &_xxs {
-                padding-right: var(--space-xxs);
-                padding-left: var(--space-xxs);
-            }
-
-            &_s {
-                padding-right: var(--space-s);
-                padding-left: var(--space-s);
-            }
-
-            &_m {
-                padding-right: var(--space-m);
-                padding-left: var(--space-m);
-            }
-
-            &_l {
-                padding-right: var(--space-l);
-                padding-left: var(--space-l);
-            }
-
-            &_xl {
-                padding-right: var(--space-xl);
-                padding-left: var(--space-xl);
-            }
-
-            &_xxl {
-                padding-right: var(--space-xxl);
-                padding-left: var(--space-xxl);
-            }
-
-            &_xxxl {
-                padding-right: var(--space-xxxl);
-                padding-left: var(--space-xxxl);
-            }
-
-            &_xxxxl {
-                padding-right: var(--space-xxxxl);
-                padding-left: var(--space-xxxxl);
+            @each $size in $sizes {
+                &_#{$size} {
+                    padding-right: var(--space-#{$size});
+                    padding-left: var(--space-#{$size});
+                }
             }
         }
 
         &_space-v {
-            &_xxxs {
-                padding-top: var(--space-xxxs);
-                padding-bottom: var(--space-xxxs);
-            }
+            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
 
-            &_xxs {
-                padding-top: var(--space-xxs);
-                padding-bottom: var(--space-xxs);
-            }
-
-            &_s {
-                padding-top: var(--space-s);
-                padding-bottom: var(--space-s);
-            }
-
-            &_m {
-                padding-top: var(--space-m);
-                padding-bottom: var(--space-m);
-            }
-
-            &_l {
-                padding-top: var(--space-l);
-                padding-bottom: var(--space-l);
-            }
-
-            &_xl {
-                padding-top: var(--space-xl);
-                padding-bottom: var(--space-xl);
-            }
-
-            &_xxl {
-                padding-top: var(--space-xxl);
-                padding-bottom: var(--space-xxl);
-            }
-
-            &_xxxl {
-                padding-top: var(--space-xxxl);
-                padding-bottom: var(--space-xxxl);
-            }
-
-            &_xxxxl {
-                padding-top: var(--space-xxxxl);
-                padding-bottom: var(--space-xxxxl);
+            @each $size in $sizes {
+                &_#{$size} {
+                    padding-top: var(--space-#{$size});
+                    padding-bottom: var(--space-#{$size});
+                }
             }
         }
     }
@@ -362,20 +262,12 @@
         }
 
         &_indent-b {
-            &_s {
-                margin-bottom: var(--space-s);
-            }
-            
-            &_m {
-                margin-bottom: var(--space-m);
-            }
+            $sizes: s, m, l, xl;
 
-            &_l {
-                margin-bottom: var(--space-l);
-            }
-
-            &_xl {
-                margin-bottom: var(--space-xl);
+            @each $size in $sizes {
+                &_#{$size} {
+                    margin-bottom: var(--space-#{$size});
+                }
             }
         }
 
@@ -425,24 +317,23 @@
 
 .section {
     &_indent-b {
-        &_xxl {
-            margin-bottom: var(--space-xxl);
-        }
+        $sizes: xxl, xxxxl;
 
-        &_xxxxl {
-            margin-bottom: var(--space-xxxxl);
+        @each $size in $sizes {
+            &_#{$size} {
+                margin-bottom: var(--space-#{$size});
+            }
         }
     }
 
     &_space-v {
-        &_xxl {
-            padding-top: var(--space-xxl);
-            padding-bottom: var(--space-xxl);
-        }
+        $sizes: xxl, xxxxl;
 
-        &_xxxxl {
-            padding-top: var(--space-xxxxl);
-            padding-bottom: var(--space-xxxxl);
+        @each $size in $sizes {
+            &_#{$size} {
+                padding-top: var(--space-#{$size});
+                padding-bottom: var(--space-#{$size});
+            }
         }
     }
 }

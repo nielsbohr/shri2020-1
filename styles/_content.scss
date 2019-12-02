@@ -1,0 +1,85 @@
+@import 'theme';
+.text {
+    &_align {
+        &_center {
+            text-align: center;
+        }
+    }
+
+    &_size {
+        $sizes: s, m, l, xl, xxl;
+
+        @each $size in $sizes {
+            &_#{$size} {
+                font-size: var(--font-size-#{$size});
+                --size-text: #{$size};
+            }
+        }
+    }
+
+    &_type {
+        &_h1 {
+            margin: 18px 0 24px;
+        }
+
+        &_h2 {
+            margin: 45px 0 21px;
+        }
+
+        &_h3 {
+            margin: 42px 0 0;
+        }
+
+        &_p {
+            margin: 15px 0 21px;
+        }
+    }
+
+    &_view {
+        $colors: primary, secondary, ghost, link;
+
+        @each $color in $colors {
+            &_#{$color} {
+                color: var(--color-text-#{$color});
+            }
+        }
+    }
+
+    &__word {
+        &_width {
+            $sizes: s, m, l;
+
+            @each $size in $sizes {
+                &_#{$size} {
+                    font-size: var(--font-size-#{$size});
+                    --size-text: #{$size};
+                }
+            }
+        }
+    }
+    // доделать
+}
+
+.avatar {
+
+}
+
+.brand-logo {
+
+}
+
+.placeholder {
+
+}
+
+.button {
+
+}
+
+.input {
+
+}
+
+.image {
+
+}
