@@ -1,9 +1,9 @@
 .theme {
     &_color {   
         &_project-default {
-            --bg-default: #FFFFFF;
-            --bg-accent: #FFCC00;
-            --bg-border: #000000;
+            --color-default: #FFFFFF;
+            --color-accent: #FFCC00;
+            --color-border: #000000;
             //
             --text-main: #000000;
             --text-scnd: rgba(0, 0, 0, 0.6);
@@ -11,9 +11,9 @@
             --text-link: #0077FF;
         }
         &_project-brand {
-            --bg-default: #0077FF;
-            --bg-accent: #FFFFFF;
-            --bg-border: #FFFFFF;
+            --color-default: #0077FF;
+            --color-accent: #FFFFFF;
+            --color-border: #FFFFFF;
             //
             --text-main: #FFFFFF;
             --text-scnd: rgba(255, 255, 255, 0.6);
@@ -22,9 +22,9 @@
         }
 
         &_project-inverse {
-            --bg-default: #000000;
-            --bg-accent: #FFFFFF;
-            --bg-border: #FFFFFF;
+            --color-default: #000000;
+            --color-accent: #FFFFFF;
+            --color-border: #FFFFFF;
             //
             --text-main: #FFFFFF;
             --text-scnd: rgba(255, 255, 255, .6);
@@ -33,9 +33,9 @@
         }
 
         &_project-warning {
-            --bg-default: #FF3333;
-            --bg-accent: #FFFFFF;
-            --bg-border: #FF3333;
+            --color-default: #FF3333;
+            --color-accent: #FFFFFF;
+            --color-border: #FF3333;
             //
             --text-main: #FFFFFF;
             --text-scnd: rgba(255, 255, 255, 0.6);

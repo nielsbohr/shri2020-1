@@ -1,0 +1,105 @@
+@import 'theme';
+
+$screen-m: 1024px;
+
+.layout {
+    &__container {
+        &_align {
+            &_center {
+                text-align: center;
+            }
+        }
+
+        &_size {
+            &_s {
+                max-width: 920px; 
+            }
+
+            &_m {
+                max-width: 1280px;
+            }
+        }
+
+        &_space-v {
+            &_xxxxl {
+                padding-top: var(--space-xxxxl);
+                padding-bottom: var(--space-xxxxl);
+            }
+
+            &_xxxxxl {
+                padding-top: var(--space-xxxxxl);
+                padding-bottom: var(--space-xxxxxl);
+            }
+        }
+
+        &_intent-b {
+            &_xxl {
+                margin-bottom: var(--space-xxl);
+            }
+
+            &_xxxxl {
+                margin-bottom: var(--space-xxxxl);
+            }
+        }
+    }
+}
+
+.grid {
+    &_m-columns {
+        &_10 {
+            --step: calc(#{$screen-m} / 10);
+        }
+
+        &_12 {
+            --step: calc(#{$screen-m} / 12);
+        }
+    }
+
+    &_col-gap {
+        &_two-thirds {
+
+        }
+
+        &_full {
+
+        }
+
+        &_half {
+
+        }
+    }
+
+    &_row-gap {
+        &_full {
+
+        }
+
+        &_half {
+
+        }
+    }
+
+    &__fraction {
+        &_m-col {
+            &_2 {
+                width: calc(var(--step) * 2);
+            }
+
+            &_3 {
+                width: calc(var(--step) * 3);
+            }
+
+            &_4 {
+                width: calc(var(--step) * 4);
+            }
+
+            &_5 {
+                width: calc(var(--step) * 5);
+            }
+
+            &_8 {
+                width: calc(var(--step) * 8);
+            }
+        }
+    }
+}

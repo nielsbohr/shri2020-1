@@ -1,14 +1,15 @@
-@use 'sass:map';
 @import 'theme';
+@import 'layout';
+@import 'pattern';
 
 :root{
     box-sizing: border-box;
 }
 
 .product {
-    background: var(--bg-accent);
+    background: var(--color-accent);
 }
 
 .warning {
-    background: var(--bg-accent);
+    background: var(--color-accent);
 }
