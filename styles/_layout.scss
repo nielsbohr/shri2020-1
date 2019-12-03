@@ -81,24 +81,11 @@ $screen-m: 1024px;
 
     &__fraction {
         &_m-col {
-            &_2 {
-                width: calc(var(--step) * 2);
-            }
-
-            &_3 {
-                width: calc(var(--step) * 3);
-            }
-
-            &_4 {
-                width: calc(var(--step) * 4);
-            }
-
-            &_5 {
-                width: calc(var(--step) * 5);
-            }
-
-            &_8 {
-                width: calc(var(--step) * 8);
+            $columns: 2 3 4 5 8;
+            @each $col in $columns {
+                &_#{$col} {
+                    width: calc(var(--step) * #{$col});
+                }
             }
         }
     }
