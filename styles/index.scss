@@ -7,10 +7,50 @@
     box-sizing: border-box;
 }
 
-.product {
-    background: var(--color-accent);
+.payment {
+    border-width: 3px;
+
+    &__footer {
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .warning {
-    background: var(--color-accent);
+    min-height: 335px;
+}
+
+.product {
+    min-height: 300px;
+    border-width: 3px;
+    svg {
+        height: 160px;
+    }
+}
+
+.history {
+    border-width: 3px;
+}
+
+.cover {
+    min-height: 472px;
+}
+
+.event {
+    min-height: 400px;
+}
+
+.header {
+
+}
+
+.onoffswitch {
+    width: 97px;
+    height: 32px;
+    // background: var(--color-border);
+    border: 2px solid var(--color-border);
+}
+
+.footer {
+
 }

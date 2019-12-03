@@ -1,12 +1,12 @@
 @import 'theme';
 
-$screen-m: 1024px;
-
 .layout {
     &__container {
+        display: flex;
+
         &_align {
             &_center {
-                text-align: center;
+                justify-content: center;
             }
         }
 
@@ -45,6 +45,7 @@ $screen-m: 1024px;
 }
 
 .grid {
+    display: flex;
     &_m-columns {
         &_10 {
             --step: calc(#{$screen-m} / 10);

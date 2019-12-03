@@ -1,3 +1,5 @@
+$screen-m: 1024px;
+
 .theme {
     &_color {   
         &_project-default {
@@ -78,6 +80,18 @@
             --space-xxxl: 45px;
             --space-xxxxl: 51px;
             --space-xxxxxl: 72px;
+        }
+    }
+
+    &_gap {
+        &_small {
+            @media (min-width: $screen-m) {
+                --gap: var(--space-xl)   
+            } 
+
+            @media (max-width: $screen-m) {
+                --gap: var(--space-s)   
+            } 
         }
     }
 }

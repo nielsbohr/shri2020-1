@@ -48,7 +48,7 @@
 
         @each $color in $colors {
             &_#{$color} {
-                color: var(--color-text-#{$color});
+                --text-bg-color: var(--color-text-#{$color});
             }
         }
     }
@@ -60,6 +60,7 @@
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);
+                    background: var(--text-bg-color);
                 }
             }
         }
@@ -79,20 +80,16 @@
 
 .brand-logo {
     &_name {
-        &_blue {
-            background: #5dcdf9;
-        }
+        $colors: 
+            blue #5dcdf9,
+            green #23b324,
+            red #ff3333,
+            purple #c62cff;
 
-        &_green {
-            background: #23b324;
-        }
-
-        &_red {
-            background: #ff3333;
-        }
-
-        &_purple {
-            background: #c62cff;
+        @each $name, $color in $colors {
+            &_#{$name} {
+                background: $color;
+            }
         }
     }
 
