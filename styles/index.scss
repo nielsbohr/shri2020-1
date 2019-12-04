@@ -1,23 +1,28 @@
-@import 'theme';
-@import 'layout';
-@import 'pattern';
-@import 'content';
+@import 'base/theme';
+@import 'base/layout';
+@import 'base/pattern';
+@import 'base/content';
+
+@import 'content/payment';
 
 :root{
     box-sizing: border-box;
 }
 
-.payment {
-    border-width: 3px;
-
-    &__footer {
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
 .warning {
     min-height: 335px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__button-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .product {

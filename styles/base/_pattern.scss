@@ -123,13 +123,14 @@
 
         &_distribute {
             &_between {
-
+                display: flex;
+                justify-content: space-between;
             }
         }
 
         &_vertical-align {
             &_center {
-                
+
             }
         }
 
@@ -167,6 +168,7 @@
     }
 
     &__label {
+
         &_width {
             &_default {
                 width: 35%;
@@ -175,7 +177,7 @@
     }
 
     &__control {
-
+        width: 100%;
     }
 }
 

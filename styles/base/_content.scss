@@ -154,7 +154,8 @@
 }
 
 .input {
-    border-width: 3px;
+    $border-w: 3px;
+    border: $border-w solid var(--color-border);
     &_size {
         $sizes:
             s 24px,
@@ -166,7 +167,7 @@
         @each $size, $height in $sizes {
             &_#{$size} {
                 width: 100%;
-                height: $height;
+                height: $height - ($border-w * 2);
             }
         }
     }
