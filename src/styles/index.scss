@@ -17,28 +17,8 @@
     box-sizing: border-box;
 }
 
-.warning {
-    min-height: 335px;
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__button-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.product {
-    min-height: 300px;
-    border-width: 3px;
-    svg {
-        height: 160px;
-    }
+.page {
+    background: var(--color-default);
 }
 
 .history {
