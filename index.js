@@ -1,2 +1,2 @@
 import 'normalize.css';
-import './styles/index.scss';
+import './src/styles/index.scss';

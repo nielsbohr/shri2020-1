@@ -5,6 +5,8 @@
     flex-direction: column;
 
     &__container {
+        width: 100%;
+
         &_align {
             &_center {
                 align-self: center;
@@ -46,38 +48,40 @@
 }
 
 .grid {
-    display: flex;
+
+    display: grid;
+
     &_m-columns {
         &_10 {
-            --step: calc(#{$screen-m} / 10);
+            grid-template-columns: repeat(10, 1fr);
         }
 
         &_12 {
-            --step: calc(#{$screen-m} / 12);
+            grid-template-columns: repeat(12, 1fr);
         }
     }
 
     &_col-gap {
         &_two-thirds {
-            --col-gap: calc(var(--gap) * 2 / 3);
+            column-gap: calc(var(--gap) * 2 / 3);
         }
 
         &_full {
-            --col-gap: var(--gap);
+            column-gap: var(--gap);
         }
 
         &_half {
-            --col-gap: calc(var(--gap) / 2);
+            column-gap: calc(var(--gap) / 2);
         }
     }
 
     &_row-gap {
         &_full {
-            --row-gap: var(--gap);
+            row-gap: var(--gap);
         }
 
         &_half {
-            --row-gap: calc(var(--gap) / 2);
+            row-gap: calc(var(--gap) / 2);
         }
     }
 
@@ -86,8 +90,7 @@
             $columns: 2 3 4 5 8;
             @each $col in $columns {
                 &_#{$col} {
-                    width: calc(var(--step) * #{$col});
-                    margin: calc(var(--row-gap) / 2) calc(var(--col-gap) / 2);
+                    grid-column: auto / span $col;
                 }
             }
         }

@@ -1,4 +1,5 @@
-$screen-m: 1024px;
+$breakpoint: 1024px;
+$screen-m: $breakpoint;
 
 .theme {
     &_color {   
@@ -12,7 +13,7 @@ $screen-m: 1024px;
             --color-text-ghost: rgba(0, 0, 0, 0.3);
             --color-text-link: #0077FF;
             //
-            --image-placeholder: '../image-placeholder-primary.svg';
+            --image-placeholder: url('../assets/svg/image-placeholder-primary.svg');
         }
         &_project-brand {
             --color-default: #0077FF;
@@ -24,7 +25,7 @@ $screen-m: 1024px;
             --color-text-ghost: rgba(255, 255, 255, 0.3);
             --color-text-link: #FFFFFF;
             //
-            --image-placeholder: '../image-placeholder-inverse.svg';
+            --image-placeholder: url('../assets/svg/image-placeholder-inverse.svg');
         }
 
         &_project-inverse {
@@ -37,7 +38,7 @@ $screen-m: 1024px;
             --color-text-ghost: rgba(255, 255, 255, .3);
             --color-text-link: #0070F0;
             //
-            --image-placeholder: '../image-placeholder-inverse.svg';
+            --image-placeholder: url('../assets/svg/image-placeholder-inverse.svg');
         }
 
         &_project-warning {
