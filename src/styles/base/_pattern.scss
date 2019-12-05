@@ -224,7 +224,7 @@
 .list {
     &_border {
         &_all {
-            
+            border: 3px solid var(--color-border);
         }
     }
 
@@ -237,11 +237,19 @@
     &__item {
         &_border {
             &_bottom {
-                border-style: bottom;
+                border-bottom: 3px solid var(--color-border);
+
+                &:last-child {
+                    border: 0;
+                }
             }
 
             &_top {
-                border-style: top;
+                border-top: 3px solid var(--color-border);
+
+                &:first-child {
+                    border: 0;
+                }
             }
         }
 

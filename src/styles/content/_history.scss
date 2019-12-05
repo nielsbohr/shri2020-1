@@ -1,0 +1,27 @@
+.history {
+    &__transaction {
+        .e-accordion__more {
+            display: none;
+        }
+    }
+
+    &__show {
+        display: flex;
+
+    }
+
+    &__details {
+        flex: 1;
+        display: flex;
+    }
+
+    &__time {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__quantity {
+        align-self: center;
+    }
+}
