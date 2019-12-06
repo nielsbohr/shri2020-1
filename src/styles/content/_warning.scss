@@ -13,13 +13,11 @@
         }
 
         .text {
-            display: grid; 
+            //display: grid; ?
         }
     }
 
     &__button-wrapper {
         display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 }

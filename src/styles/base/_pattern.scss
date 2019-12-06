@@ -5,26 +5,28 @@
 
     &_border {
         &_all {
-
+            border: 3px solid var(--color-border);
         }
     }
 
     &_view {
         &_default {
-
+            background: var(--color-default);
         }
     }
 
     &__content {
+        display: flex;
+
         &_distribute {
             &_center {
-
+                justify-content: center;
             }
         }
 
         &_vertical-align {
             &_center {
-
+                align-items: center;
             }
         }
 
@@ -48,34 +50,37 @@
     }
 
     &__footer {
+        display: flex;
         position: absolute;
         bottom: 0;
+        left: 0;
+        right: 0;
 
         &_distribute {
             &_between {
-
+                justify-content: space-between;
             }
 
             &_center {
-
+                justify-content: center;
             }
 
             &_right {
-
+                justify-content: right;
             }
         }
 
         &_vertical-align {
             &_center {
-
+                align-items: center;
             }
 
             &_top {
-
+                align-items: top;
             }
 
             &_bottom {
-
+                align-items: bottom;
             }
         }
 
@@ -130,7 +135,7 @@
 
         &_vertical-align {
             &_center {
-
+                align-items: center;
             }
         }
 
@@ -197,15 +202,15 @@
     &__content, &__action {
         &_distribute {
             &_default {
-
+                justify-content: flex-start;
             }
 
             &_between {
-                
+                justify-content: space-between;
             }
 
             &_center {
-                
+                justify-content: center;
             }
         }
 
@@ -255,13 +260,13 @@
 
         &_distribute {
             &_between {
-
+                justify-content: space-between;
             }
         }
 
         &_vertical-align {
             &_center {
-
+                align-items: center;
             }
         }
 
@@ -298,7 +303,7 @@
 .icon-plus {
     &_vertical-align {
         &_center {
-            vertical-align: middle;
+            align-items: center
         }
     }
 

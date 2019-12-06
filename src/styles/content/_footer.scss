@@ -1,0 +1,14 @@
+@import '../base/theme';
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: var(--space-xxxl) var(--gap);
+
+    &__content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
+}

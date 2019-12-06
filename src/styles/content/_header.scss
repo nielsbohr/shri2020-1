@@ -1,0 +1,21 @@
+@import '../base/theme';
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: var(--space-xxxl) var(--gap);
+
+    &__content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
+
+    &__logo {
+        width: 179px;
+        height: 34px;
+        align-self: center;
+        background: var(--color-text-primary);
+    }
+}

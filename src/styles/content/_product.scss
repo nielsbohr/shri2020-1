@@ -8,6 +8,7 @@
     }
 
     &__image {
+        flex: 1;
         height: 160px;
         background: var(--color-default);
         background-image: var(--image-placeholder);

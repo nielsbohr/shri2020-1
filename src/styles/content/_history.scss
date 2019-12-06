@@ -1,4 +1,6 @@
 .history {
+    border-width: 3px;
+    
     &__transaction {
         .e-accordion__more {
             display: none;
@@ -7,7 +9,7 @@
 
     &__show {
         display: flex;
-
+        margin-top: 0;
     }
 
     &__details {
@@ -17,8 +19,24 @@
 
     &__time {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: column; 
+
+        .text:first-child {
+            margin-top: 18px; 
+        }
+
+        .text:last-child {
+            margin-top: 13px;
+        }
+
+    }
+
+    &__destination {
+        display: flex;
+    }
+
+    &__label {
+        align-self: center;
     }
 
     &__quantity {

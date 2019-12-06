@@ -1,0 +1,23 @@
+.event {
+    min-height: 400px;
+
+    &__content {
+        flex-direction: column;
+    }
+
+    &__preview {
+        display: flex;
+
+        .avatar {
+            margin: 0 5px;
+        }
+
+        .brand-logo {
+            margin: 0 5px;
+        }
+    }
+
+    &__title {
+        margin-top: 44px;
+    }
+}

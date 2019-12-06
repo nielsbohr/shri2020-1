@@ -48,7 +48,6 @@
 }
 
 .grid {
-
     display: grid;
 
     &_m-columns {
@@ -91,6 +90,12 @@
             @each $col in $columns {
                 &_#{$col} {
                     grid-column: auto / span $col;
+                }
+
+                @media (max-width: $breakpoint) {
+                    &_#{$col} {
+                        grid-column: 1 / -1;
+                    }
                 }
             }
         }
