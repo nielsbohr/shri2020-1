@@ -1,9 +1,11 @@
 @import 'theme';
 
 .text {
+    display: flex;
+
     &_align {
         &_center {
-            text-align: center;
+            align-items: center;
         }
     }
 

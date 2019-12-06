@@ -240,6 +240,7 @@
     }
 
     &__item {
+        display: flex;
         &_border {
             &_bottom {
                 border-bottom: 3px solid var(--color-border);

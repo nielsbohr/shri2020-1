@@ -1,15 +1,39 @@
+@import '../base/theme';    
+
 .history {
     border-width: 3px;
-    
+
     &__transaction {
-        .e-accordion__more {
-            display: none;
-        }
+        flex-direction: column;
     }
 
     &__show {
-        display: flex;
+        flex: 1;
+        justify-content: space-between;
         margin-top: 0;
+    }
+
+    &__hide {
+        display: none;
+    }
+
+    &__info {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin-top: 8px;
+    }
+
+    &__description {
+        flex-direction: column;
+
+        .text {
+            margin-bottom: 17px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
     }
 
     &__details {
@@ -39,7 +63,7 @@
         align-self: center;
     }
 
-    &__quantity {
-        align-self: center;
+    &__actions {
+        margin-top: 18px;
     }
 }
