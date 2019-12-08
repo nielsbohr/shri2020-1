@@ -55,16 +55,16 @@ $screen-m: $breakpoint;
 
     &_size {
         &_default {
-            --font-size-s: 7px;
-            --font-size-m: 8px;
-            --font-size-l: 10px;
-            --font-size-xl: 11px;
-            --font-size-xxl: 13px;
-            --font-space-s: 18px;
-            --font-space-m: 21px;
-            --font-space-l: 25px;
-            --font-space-xl: 28px;
-            --font-space-xxl: 34px;
+            --font-size-s: 8px;
+            --font-size-m: 10px;
+            --font-size-l: 11px;
+            --font-size-xl: 13px;
+            --font-size-xxl: 16px;
+            --font-space-s: 21px;
+            --font-space-m: 25px;
+            --font-space-l: 28px;
+            --font-space-xl: 34px;
+            --font-space-xxl: 38px;
         }
     }
 

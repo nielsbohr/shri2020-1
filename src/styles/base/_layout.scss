@@ -5,11 +5,13 @@
     flex-direction: column;
 
     &__container {
+        background: var(--color-default);
         width: 100%;
 
         &_align {
             &_center {
                 align-self: center;
+                margin: 0 auto;
             }
         }
 

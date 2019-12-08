@@ -1,3 +1,19 @@
+@import '../base/theme';
+
 .cover {
     min-height: 472px;
+
+    &__info {
+        flex-direction: column;
+    }
+
+    &__preview {
+        margin-bottom: var(--space-l);
+
+        .image {
+            border-width: 3px;
+            height: 174px;
+            width: auto;
+        }
+    }
 }

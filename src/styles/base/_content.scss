@@ -2,6 +2,7 @@
 
 .text {
     display: flex;
+    flex-flow: row wrap;
 
     &_align {
         &_center {
@@ -19,11 +20,12 @@
 
         @each $size, $s, $m, $l, $h in $properties {
             &_#{$size} {
-                font-size: var(--font-size-#{$size});
+                align-items: center;
                 --size-text-s: #{$s};
                 --size-text-m: #{$m};
                 --size-text-l: #{$l};
-                --height-text: #{$h}
+                --height-text: #{$h};
+                --space-size: var(--font-space-#{$size});
             }
         }
     }
@@ -63,6 +65,8 @@
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);
+                    margin-top: calc((var(--space-size) - var(--height-text)) / 2);
+                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2);
                     background: var(--text-bg-color);
                 }
             }
@@ -181,4 +185,6 @@
     border: 3px solid var(--color-border);
     background: var(--color-default);
     background-image: var(--image-placeholder);
+    background-repeat: no-repeat;
+    background-position: center;
 }

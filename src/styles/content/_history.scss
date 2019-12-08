@@ -28,7 +28,6 @@
         flex-direction: column;
 
         .text {
-            margin-bottom: 17px;
 
             &:last-child {
                 margin: 0;
@@ -43,16 +42,8 @@
 
     &__time {
         display: flex;
-        flex-direction: column; 
-
-        .text:first-child {
-            margin-top: 18px; 
-        }
-
-        .text:last-child {
-            margin-top: 13px;
-        }
-
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__destination {
