@@ -2,6 +2,10 @@
 
 .warning {
     min-height: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 
     &__content {
         display: flex;
@@ -14,6 +18,5 @@
 
     &__button-wrapper {
         display: flex;
-        margin-top: 5px;
     }
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "set NODE_ENV=production && npx webpack index.js",
-    "dev": "npx webpack-dev-server index.js"
+    "dev": "npx webpack-dev-server index.js",
+    "sl": "stylelint '**/**/*.scss'"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +26,9 @@
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-recommended-scss": "^4.1.0",
+    "stylelint-scss": "^3.13.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
