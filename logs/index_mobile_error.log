@@ -1,0 +1,11 @@
+TypeError: Cannot set property 'onload' of null
+    at eval (webpack:///./src/js/index.js?:34:22)
+    at Object../src/js/index.js (webpack-internal:///./static/nielsbohr/script.js:155:1)
+    at __webpack_require__ (webpack-internal:///./static/nielsbohr/script.js:20:30)
+    at eval (webpack:///./index.js?:6:65)
+    at Module../index.js (webpack-internal:///./static/nielsbohr/script.js:97:1)
+    at __webpack_require__ (webpack-internal:///./static/nielsbohr/script.js:20:30)
+    at eval (webpack-internal:///./static/nielsbohr/script.js:84:18)
+    at eval (webpack-internal:///./static/nielsbohr/script.js:87:10)
+    at Object../static/nielsbohr/script.js (file:///opt/buildagent/work/e163812401825360/screenshots/static/nielsbohr/build/script.js:96:1)
+    at __webpack_require__ (file:///opt/buildagent/work/e163812401825360/screenshots/static/nielsbohr/build/script.js:20:30)
