@@ -6,14 +6,9 @@
     &__content {
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         .placeholder {
             margin: var(--space-m) auto;
-        }
-
-        .text {
-            justify-content: center;
         }
     }
 
