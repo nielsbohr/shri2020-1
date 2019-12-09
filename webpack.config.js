@@ -18,6 +18,7 @@ module.exports = {
             //   : MiniCssExtractPlugin.loader,
             MiniCssExtractPlugin.loader,
             'css-loader',
+            'postcss-loader',
             'sass-loader'
           ],
         },
@@ -27,10 +28,6 @@ module.exports = {
               loader: 'svg-url-loader'
           }
         },
-        {
-            test: /\.css$/,
-            use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
-        }
       ],
     },
     plugins: [
@@ -39,7 +36,7 @@ module.exports = {
           ignoreOrder: false,
         }),
     ],
-    watch: true,
+    watch: process.env.NODE_ENV !== 'production' ? true : false,
     devServer: {
         contentBase: path.join(__dirname, 'build/'),
         compress: true,

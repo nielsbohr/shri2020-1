@@ -31,19 +31,17 @@ function changeTheme(e) {
     }
 }
 
-document.body.onload = () => {
-    document.body.onclick = (e) => {
-        if (e.target.classList.contains('onoffswitch__button')) {
-            changeTheme(e);
-        } else {
-            for (let i = 0; i < e.path.length; i++) {
-                if (e.path[i].classList) {
-                    if (e.path[i].classList.contains('e-accordion_active')) {
-                    e.path[i].classList.remove('e-accordion_active');
-                    } else if (e.path[i].classList.contains('e-accordion')) {
-                    e.path[i].classList.add('e-accordion_active');
-                    }   
-                }
+document.body.onclick = function(e) {
+    if (e.target.classList.contains('onoffswitch__button')) {
+        changeTheme(e);
+    } else {
+        for (let i = 0; i < e.path.length; i++) {
+            if (e.path[i].classList) {
+                if (e.path[i].classList.contains('e-accordion_active')) {
+                e.path[i].classList.remove('e-accordion_active');
+                } else if (e.path[i].classList.contains('e-accordion')) {
+                e.path[i].classList.add('e-accordion_active');
+                }   
             }
         }
     }

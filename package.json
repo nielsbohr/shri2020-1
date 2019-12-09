@@ -13,16 +13,26 @@
     "svg-url-loader": "^3.0.3"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
+    "postcss-loader": "^3.0.0",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ]
 }

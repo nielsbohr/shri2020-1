@@ -1,3 +1,6 @@
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
 @import 'base/theme';
 @import 'base/layout';
 @import 'base/pattern';
