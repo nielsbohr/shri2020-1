@@ -13,26 +13,14 @@
         margin-top: 0;
     }
 
-    &__hide {
-        display: none;
-    }
-
     &__info {
         display: flex;
         flex: 1;
         flex-direction: column;
-        margin-top: 8px;
     }
 
     &__description {
         flex-direction: column;
-
-        .text {
-
-            &:last-child {
-                margin: 0;
-            }
-        }
     }
 
     &__details {
@@ -52,9 +40,5 @@
 
     &__label {
         align-self: center;
-    }
-
-    &__actions {
-        margin-top: 18px;
     }
 }

@@ -14,6 +14,10 @@
         background-image: var(--image-placeholder);
         background-repeat: no-repeat;
         background-position: center;
+
+        .image {
+            border: 0;
+        }
     }
 
     &__title {

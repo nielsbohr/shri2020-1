@@ -20,7 +20,6 @@
 
         @each $size, $s, $m, $l, $h in $properties {
             &_#{$size} {
-                align-items: center;
                 --size-text-s: #{$s};
                 --size-text-m: #{$m};
                 --size-text-l: #{$l};
@@ -187,4 +186,21 @@
     background-image: var(--image-placeholder);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.e-accordion {
+    cursor: pointer;
+    // --padding-b: auto;
+    // padding-bottom: var(--padding-b);
+
+    &__more {
+        display: none;
+    }
+
+    &_active {
+        .e-accordion__more {
+            display: block;
+            --padding-b: 0;
+        }
+    }
 }

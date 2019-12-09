@@ -3,7 +3,7 @@
 .header {
     display: flex;
     justify-content: center;
-    margin: var(--space-xxxl) var(--gap);
+    padding: var(--space-xxxl) var(--gap);
 
     &__content {
         flex: 1;

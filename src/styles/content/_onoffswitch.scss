@@ -6,12 +6,21 @@
     border: 2px solid var(--color-border);
     position: relative;
 
+    &_checked {
+        --btn-right: 2px;
+    }
+
+    &_unchecked {
+        --btn-right: 66px;
+    }
+
     &__button {
+        transition: .13s;
         width: 24px;
         height: 24px;
         position: absolute;
         bottom: 1px;
-        right: 2px;
+        right: var(--btn-right);
         cursor: pointer;
         background: var(--color-border);
     }
