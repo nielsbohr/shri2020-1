@@ -65,9 +65,10 @@
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);
-                    margin-top: calc((var(--space-size) - var(--height-text)) / 2 - var(--px));
-                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2 + var(--px));
+                    border-top: calc(((var(--space-size) - var(--height-text)) / 2) - var(--px)) solid transparent;
+                    border-bottom: calc((var(--space-size) - var(--height-text)) / 2 + var(--px)) solid transparent;
                     background: var(--text-bg-color);
+                    background-clip: padding-box;
                 }
             }
         }
@@ -191,8 +192,6 @@
 
 .e-accordion {
     cursor: pointer;
-    // --padding-b: auto;
-    // padding-bottom: var(--padding-b);
 
     &__more {
         display: none;
