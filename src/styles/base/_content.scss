@@ -12,18 +12,19 @@
 
     &_size {
         $properties: 
-            s 20px 48px 100px 8px,
-            m 24px 56px 114px 10px,
-            l 28px 68px 138px 11px,
-            xl 32px 74px 154px 13px, 
-            xxl 36px 88px 184px 16px;
+            s 20px 48px 100px 8px -1px,
+            m 24px 56px 114px 10px 0px,
+            l 28px 68px 138px 11px 1px,
+            xl 32px 74px 154px 13px 2px, 
+            xxl 36px 88px 184px 16px 3px;
 
-        @each $size, $s, $m, $l, $h in $properties {
+        @each $size, $s, $m, $l, $h, $px in $properties {
             &_#{$size} {
                 --size-text-s: #{$s};
                 --size-text-m: #{$m};
                 --size-text-l: #{$l};
                 --height-text: #{$h};
+                --px: #{$px};
                 --space-size: var(--font-space-#{$size});
             }
         }
@@ -64,8 +65,8 @@
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);
-                    margin-top: calc((var(--space-size) - var(--height-text)) / 2 - 2px);
-                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2 + 2px);
+                    margin-top: calc((var(--space-size) - var(--height-text)) / 2 - var(--px));
+                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2 + var(--px));
                     background: var(--text-bg-color);
                 }
             }
