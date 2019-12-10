@@ -10,30 +10,29 @@
 
         &_align {
             &_center {
-                align-self: center;
                 margin: 0 auto;
             }
         }
 
         &_size {
-            &_s {
-                max-width: 920px; 
-            }
+            $sizes:
+                s 920px,
+                m 1280px;
 
-            &_m {
-                max-width: 1280px;
+            @each $size, $pxs in $sizes {
+                &_#{$size} {           
+                    max-width: $pxs; 
+                }
             }
         }
 
         &_space-v {
             &_xxxxl {
-                padding-top: var(--space-xxxxl);
-                padding-bottom: var(--space-xxxxl);
+                padding: var(--space-xxxxl) auto var(--space-xxxxl);
             }
 
             &_xxxxxl {
-                padding-top: var(--space-xxxxxl);
-                padding-bottom: var(--space-xxxxxl);
+                padding: var(--space-xxxxxl) auto var(--space-xxxxxl);
             }
         }
 

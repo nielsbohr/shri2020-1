@@ -31,27 +31,21 @@
     }
 
     &_type {
-        &_h1 {
-            margin: 18px 0 24px;
-        }
+        $types:
+            h1 18px 0 24px,
+            h2 45px 0 21px,
+            h3 42px 0 0,
+            p  15px 0 21px;
 
-        &_h2 {
-            margin: 45px 0 21px;
-        }
-
-        &_h3 {
-            margin: 42px 0 0;
-        }
-
-        &_p {
-            margin: 15px 0 21px;
+        @each $type, $top, $h, $bottom in $types {
+            &_#{$type} {
+                margin: $top $h $bottom;
+            }
         }
     }
 
     &_view {
-        $colors: primary, secondary, ghost, link;
-
-        @each $color in $colors {
+        @each $color in primary, secondary, ghost, link {
             &_#{$color} {
                 --text-bg-color: var(--color-text-#{$color});
             }
@@ -60,8 +54,7 @@
 
     &__word {
         &_width {
-            $sizes: s, m, l;
-            @each $size in $sizes {
+            @each $size in s, m, l {
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);

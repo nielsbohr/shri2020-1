@@ -1,8 +1,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
-    mode: 'development',
+module.exports = env => {
+
+  return {
+    mode: env.production ? 'production' : 'development',
     entry: './index.js',
     output: {
         path: path.resolve(__dirname, 'build/'),
@@ -13,13 +15,15 @@ module.exports = {
         {
           test: /\.s[ac]ss$/i,
           use: [
-            // process.env.NODE_ENV !== 'production'
-            //   ? 'style-loader'
-            //   : MiniCssExtractPlugin.loader,
             MiniCssExtractPlugin.loader,
             'css-loader',
             'postcss-loader',
-            'sass-loader'
+            {
+              loader: 'sass-loader',
+              options: {
+                  implementation: require('sass'),
+              }
+            }
           ],
         },
         {
@@ -36,10 +40,11 @@ module.exports = {
           ignoreOrder: false,
         }),
     ],
-    watch: process.env.NODE_ENV !== 'production' ? true : false,
+    watch: !env.production,
     devServer: {
         contentBase: path.join(__dirname, 'build/'),
         compress: true,
         port: 9000
     }
-  };
+  }
+};

@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=production && npx webpack index.js",
-    "dev": "npx webpack-dev-server index.js",
-    "sl": "stylelint '**/**/*.scss'"
+    "start": "npx webpack --env.production index.js",
+    "dev": "npx webpack-dev-server --env index.js",
+    "sl": "stylelint src/styles/**/*.scss",
+    "eslint": "npx eslint src/js/index.js",
+    "build": "npx webpack --env.production index.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,9 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "normalize-scss": "^7.0.1",

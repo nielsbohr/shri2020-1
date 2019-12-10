@@ -5,13 +5,6 @@
         flex-direction: column;
     }
 
-    &__description {
-        margin-top: 15px;
-        .text {
-            justify-content: center;
-        }
-    }
-
     &__preview {
         display: flex;
 
@@ -26,5 +19,12 @@
 
     &__title {
         margin-top: 36px;
+    }
+
+    &__description {
+        margin-top: 15px;
+        .text {
+            justify-content: center;
+        }
     }
 }

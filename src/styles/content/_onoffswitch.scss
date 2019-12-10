@@ -5,10 +5,10 @@
     height: 28px;
     border: 2px solid var(--color-border);
     position: relative;
-    --btn-right: 66px;
+    --btn-right: 66.5px;
 
     &_checked {
-        --btn-right: 2px;
+        --btn-right: 1.5px;
     }
 
     &__button {
@@ -16,7 +16,7 @@
         width: 24px;
         height: 24px;
         position: absolute;
-        bottom: 1px;
+        bottom: 1.5px;
         right: var(--btn-right);
         cursor: pointer;
         background: var(--color-border);

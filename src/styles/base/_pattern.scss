@@ -31,24 +31,10 @@
         }
 
         &_space-a {
-            &_m {
-                padding: var(--space-m);
-            }
-
-            &_l {
-                padding: var(--space-l);
-            }
-
-            &_xl {
-                padding: var(--space-xl);
-            }
-
-            &_xxl {
-                padding: var(--space-xxl);
-            }
-
-            &_xxxl {
-                padding: var(--space-xxxl);
+            @each $size in m, l, xl, xxl, xxxl {
+                &_#{$size} {           
+                    padding: var(--space-#{$size}); 
+                }
             }
         }
     }
@@ -66,44 +52,26 @@
                 justify-content: space-between;
             }
 
-            &_center {
-                justify-content: center;
-            }
-
-            &_right {
-                justify-content: right;
+            @each $type in center, right {
+                &_#{$type} {           
+                    justify-content: $type;
+                }
             }
         }
 
         &_vertical-align {
-            &_center {
-                align-items: center;
-            }
-
-            &_top {
-                align-items: top;
-            }
-
-            &_bottom {
-                align-items: bottom;
+            @each $type in center, top, bottom {
+                &_#{$type} {           
+                    align-items: $type;
+                }
             }
         }
 
         &_space-a {
-            &_m {
-                padding: var(--space-m);
-            }
-
-            &_l {
-                padding: var(--space-l);
-            }
-
-            &_xl {
-                padding: var(--space-xl);
-            }
-
-            &_xxl {
-                padding: var(--space-xxl);
+            @each $size in m, l, xl, xxl {
+                &_#{$size} {           
+                    padding: var(--space-#{$size});
+                }
             }
         }
     }
@@ -145,9 +113,7 @@
         }
 
         &_indent-b {
-            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
-
-            @each $size in $sizes {
+            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
                 &_#{$size} {
                     margin-bottom: var(--space-#{$size});
                 }
@@ -155,9 +121,7 @@
         }
 
         &_space-h {
-            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
-
-            @each $size in $sizes {
+            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
                 &_#{$size} {
                     padding-right: var(--space-#{$size});
                     padding-left: var(--space-#{$size});
@@ -166,9 +130,7 @@
         }
 
         &_space-v {
-            $sizes: xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl;
-
-            @each $size in $sizes {
+            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
                 &_#{$size} {
                     padding-top: var(--space-#{$size});
                     padding-bottom: var(--space-#{$size});
@@ -178,7 +140,6 @@
     }
 
     &__label {
-
         &_width {
             &_default {
                 width: 35%;
@@ -220,12 +181,10 @@
         }
 
         &_space-a {
-            &_xl {
-                padding: var(--space-xl);
-            }
-
-            &_xxl {
-                padding: var(--space-xxl);
+            @each $size in xl, xxl {
+                &_#{$size} {
+                    padding: var(--space-#{$size});
+                }
             }
         }
     }
@@ -283,9 +242,7 @@
         }
 
         &_indent-b {
-            $sizes: s, m, l, xl;
-
-            @each $size in $sizes {
+            @each $size in s, m, l, xl {
                 &_#{$size} {
                     margin-bottom: var(--space-#{$size});
                 }
@@ -315,12 +272,10 @@
 
     &__icon {
         &_indent-r {
-            &_s {
-                margin-right: var(--space-s);
-            }
-
-            &_m {
-                margin-right: var(--space-m);
+            @each $size in s, m {
+                &_#{$size} {
+                    margin-right: var(--space-#{$size});
+                }
             }
         }
 
@@ -330,17 +285,11 @@
             }
         }
     }
-
-    &__block {
-        //
-    }
 }
 
 .section {
     &_indent-b {
-        $sizes: xxl, xxxxl;
-
-        @each $size in $sizes {
+        @each $size in xxl, xxxxl {
             &_#{$size} {
                 margin-bottom: var(--space-#{$size});
             }
@@ -348,9 +297,7 @@
     }
 
     &_space-v {
-        $sizes: xxl, xxxxl;
-
-        @each $size in $sizes {
+        @each $size in xxl, xxxxl {
             &_#{$size} {
                 padding-top: var(--space-#{$size});
                 padding-bottom: var(--space-#{$size});
