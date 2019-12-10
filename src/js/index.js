@@ -20,16 +20,15 @@ function changeTheme(e) {
 
     for (let i = 0; i < e.path.length; i++) {
         if (e.path[i].classList.contains('onoffswitch_checked')) {
-            e.path[i].classList.add('onoffswitch_unchecked');
             e.path[i].classList.remove('onoffswitch_checked');
-            break;
-        } else if (e.path[i].classList.contains('onoffswitch_unchecked')) {
+            return;
+        } else if (e.path[i].classList.contains('onoffswitch')) {
             e.path[i].classList.add('onoffswitch_checked');
-            e.path[i].classList.remove('onoffswitch_unchecked');
-            break;
+            return;
         }
     }
 }
+
 window.onload = () => {
     document.body.onclick = function(e) {
         if (e.target.classList.contains('onoffswitch__button')) {
@@ -38,9 +37,11 @@ window.onload = () => {
             for (let i = 0; i < e.path.length; i++) {
                 if (e.path[i].classList) {
                     if (e.path[i].classList.contains('e-accordion_active')) {
-                    e.path[i].classList.remove('e-accordion_active');
+                        e.path[i].classList.remove('e-accordion_active');
+                        return;
                     } else if (e.path[i].classList.contains('e-accordion')) {
-                    e.path[i].classList.add('e-accordion_active');
+                        e.path[i].classList.add('e-accordion_active');
+                        return;
                     }   
                 }
             }

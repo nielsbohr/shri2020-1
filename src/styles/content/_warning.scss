@@ -3,9 +3,8 @@
 .warning {
     min-height: 329px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
+    flex-wrap: wrap;
+    justify-content: center;    
 
     &__content {
         display: flex;

@@ -5,13 +5,10 @@
     height: 28px;
     border: 2px solid var(--color-border);
     position: relative;
+    --btn-right: 66px;
 
     &_checked {
         --btn-right: 2px;
-    }
-
-    &_unchecked {
-        --btn-right: 66px;
     }
 
     &__button {

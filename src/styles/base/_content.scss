@@ -64,8 +64,8 @@
                 &_#{$size} {
                     width: var(--size-text-#{$size});
                     height: var(--height-text);
-                    margin-top: calc((var(--space-size) - var(--height-text)) / 2);
-                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2);
+                    margin-top: calc((var(--space-size) - var(--height-text)) / 2 - 2px);
+                    margin-bottom: calc((var(--space-size) - var(--height-text)) / 2 + 2px);
                     background: var(--text-bg-color);
                 }
             }
