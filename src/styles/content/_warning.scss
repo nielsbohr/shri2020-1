@@ -1,7 +1,7 @@
 @use '../base/theme';
 
 .warning {
-    min-height: 335px;
+    min-height: 329px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,5 +18,10 @@
 
     &__button-wrapper {
         display: flex;
+        margin-top: 5px;
+
+        @media (max-width: $screen-m) {
+            margin-top: 0;   
+        } 
     }
 }

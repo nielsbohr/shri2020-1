@@ -90,7 +90,7 @@
         &_m-col {
             $columns: 2 3 4 5 8;
             @each $col in $columns {
-                &_#{$col} {
+                &_#{$col} {           
                     grid-column: auto / span $col;
                 }
 
