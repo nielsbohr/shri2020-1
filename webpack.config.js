@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const sass = require('sass');
 
 module.exports = (env) => ({
   mode: env.production ? 'production' : 'development',
@@ -19,7 +20,7 @@ module.exports = (env) => ({
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('sass'),
+              implementation: sass,
             },
           },
         ],
