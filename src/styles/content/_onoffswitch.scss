@@ -1,9 +1,10 @@
 @use '../base/theme';
+$color-border: var(--color-border);
 
 .onoffswitch {
-    width: 93px;
-    height: 28px;
-    border: 2px solid var(--color-border);
+    width: 97px;
+    height: 32px;
+    border: 2px solid $color-border;
     position: relative;
     --btn-right: 66.5px;
 
@@ -19,6 +20,6 @@
         bottom: 1.5px;
         right: var(--btn-right);
         cursor: pointer;
-        background: var(--color-border);
+        background: $color-border;
     }
 }

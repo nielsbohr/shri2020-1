@@ -1,22 +1,13 @@
 @use '../base/theme';
 
 .product {
-    min-height: 294px;
-    svg {
-        height: 160px;
-    }
+    min-height: 300px;
+    border-width: 3px;
 
     &__image {
         flex: 1;
         height: 160px;
-        background: var(--color-default);
-        background-image: var(--image-placeholder);
-        background-repeat: no-repeat;
-        background-position: center;
-
-        .image {
-            border: 0;
-        }
+        border-color: transparent;
     }
 
     &__title {

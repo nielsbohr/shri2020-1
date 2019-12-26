@@ -93,7 +93,7 @@
                     grid-column: auto / span $col;
                 }
 
-                @media (max-width: $breakpoint) {
+                @media (max-width: breakpoint) {
                     &_#{$col} {
                         grid-column: 1 / -1;
                     }

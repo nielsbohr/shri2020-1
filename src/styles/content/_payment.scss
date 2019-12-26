@@ -1,15 +1,14 @@
 .payment {
     &__content {
+        flex-direction: column;
         padding-bottom: 18px;
         border-top: inherit;
         border-bottom: inherit;
     }
 
-    .form {
-        &__control {  
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
+    &__footer {
+        .form__control {
+            flex: 0;
         }
     }
 }

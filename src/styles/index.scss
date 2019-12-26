@@ -1,23 +1,27 @@
-@import "../../node_modules/normalize-scss/sass/normalize";
-@include normalize();
+@use "../../node_modules/normalize-scss/sass/normalize" as normalize;
+@use 'base/theme';
+@use 'base/layout';
+@use 'base/pattern';
+@use 'base/content';
 
-@import 'base/theme';
-@import 'base/layout';
-@import 'base/pattern';
-@import 'base/content';
+@use 'content/payment';
+@use 'content/warning';
+@use 'content/product';
+@use 'content/history';
+@use 'content/cover';
+@use 'content/event';
+@use 'content/header';
+@use 'content/onoffswitch';
+@use 'content/footer';
 
-@import 'content/payment';
-@import 'content/warning';
-@import 'content/product';
-@import 'content/history';
-@import 'content/cover';
-@import 'content/event';
-@import 'content/header';
-@import 'content/onoffswitch';
-@import 'content/footer';
+@include normalize.normalize();
 
-:root{
+html {
     box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
 }
 
 .page {

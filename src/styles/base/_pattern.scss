@@ -91,6 +91,8 @@
     }
 
     &__item {
+        display: flex;
+
         &_border {
             &_bottom {
                 &:last-child {
@@ -101,7 +103,6 @@
 
         &_distribute {
             &_between {
-                display: flex;
                 justify-content: space-between;
             }
         }
@@ -139,20 +140,24 @@
         }
     }
 
+    $label: 35;
+
     &__label {
         &_width {
             &_default {
-                width: 35%;
+                flex: $label / 100;
             }
         }
     }
 
     &__control {
-        width: 100%;
+        flex: (100 - $label) / 100;
     }
 }
 
 .informer {
+    display: flex;
+     
     &_border {
         &_all {
             border: 3px solid var(--color-border);
