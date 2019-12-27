@@ -1,16 +1,19 @@
 @use '../base/theme';
 
 .product {
-    min-height: 300px;
-    border-width: 3px;
+	min-height: 300px;
+	border-width: 3px;
 
-    &__image {
-        flex: 1;
-        height: 160px;
-        border-color: transparent;
-    }
+	&__image {
+		flex: 1;
+		height: 160px;
+	}
 
-    &__title {
-        margin-bottom: 45px;
-    }
+	&__title {
+		margin-bottom: 45px;
+	}
+
+	.image {
+		border-color: var(--color-default);
+	}
 }

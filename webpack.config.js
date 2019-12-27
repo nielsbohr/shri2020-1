@@ -1,9 +1,8 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sass = require('sass');
+const path = require('path');
 
-module.exports = (env) => ({
-  mode: env.production ? 'production' : 'development',
+module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'build/'),
@@ -39,10 +38,5 @@ module.exports = (env) => ({
       ignoreOrder: false,
     }),
   ],
-  watch: !env.production,
-  devServer: {
-    contentBase: path.join(__dirname, 'build/'),
-    compress: true,
-    port: 9000,
-  },
-});
+  watch: true,
+};

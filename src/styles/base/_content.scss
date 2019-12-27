@@ -1,198 +1,198 @@
 @use 'theme';
 
 .text {
-    display: flex;
-    flex-flow: row wrap;
+	display: flex;
+	flex-wrap: wrap;
 
-    &_align {
-        &_center {
-            justify-content: center;
-        }
-    }
+	&_align {
+		&_center {
+			justify-content: center;
+		}
+	}
 
-    &_size {
-        $properties: 
-            s 20px 48px 100px 8px -1px,
-            m 24px 56px 114px 10px 0px,
-            l 28px 68px 138px 11px 0px,
-            xl 32px 74px 154px 13px 1.5px, 
-            xxl 36px 88px 184px 16px 3px;
+	&_size {
+		$properties: 
+		s 20px 48px 100px 8px -1.5px,
+		m 24px 56px 114px 10px -1px,
+		l 28px 68px 138px 11px 0px,
+		xl 32px 74px 154px 13px 1.5px, 
+		xxl 36px 88px 184px 16px 3px;
 
-        @each $size, $s, $m, $l, $h, $px in $properties {
-            &_#{$size} {
-                --size-text-s: #{$s};
-                --size-text-m: #{$m};
-                --size-text-l: #{$l};
-                --height-text: #{$h};
-                --px: #{$px};
-                --space-size: var(--font-space-#{$size});
-            }
-        }
-    }
+		@each $size, $s, $m, $l, $h, $px in $properties {
+			&_#{$size} {
+				--size-text-s: #{$s};
+				--size-text-m: #{$m};
+				--size-text-l: #{$l};
+				--height-text: #{$h};
+				--px: #{$px};
+				--space-size: var(--font-space-#{$size});
+			}
+		}
+	}
 
-    &_type {
-        $types:
-            h1 18px 0 24px,
-            h2 45px 0 21px,
-            h3 42px 0 0,
-            p  15px 0 21px;
+	&_type {
+		$types:
+		h1 18px 0 24px,
+		h2 45px 0 21px,
+		h3 42px 0 0,
+		p  15px 0 21px;
 
-        @each $type, $top, $h, $bottom in $types {
-            &_#{$type} {
-                margin: $top $h $bottom;
-            }
-        }
-    }
+		@each $type, $top, $h, $bottom in $types {
+			&_#{$type} {
+				margin: $top $h $bottom;
+			}
+		}
+	}
 
-    &_view {
-        @each $color in primary, secondary, ghost, link {
-            &_#{$color} {
-                --text-bg-color: var(--color-text-#{$color});
-            }
-        }
-    }
+	&_view {
+		@each $color in primary, secondary, ghost, link {
+			&_#{$color} {
+				--text-bg-color: var(--color-text-#{$color});
+			}
+		}
+	}
 
-    &__word {
-        &_width {
-            @each $size in s, m, l {
-                &_#{$size} {
-                    width: var(--size-text-#{$size});
-                    height: var(--space-size);
-                    border-top: calc((var(--space-size) - var(--height-text)) / 2 - var(--px)) solid transparent;
-                    border-bottom: calc((var(--space-size) - var(--height-text)) / 2 + var(--px)) solid transparent;
-                    background: var(--text-bg-color);
-                    background-clip: padding-box;
-                }
-            }
-        }
-    }
+	&__word {
+		&_width {
+			@each $size in s, m, l {
+				&_#{$size} {
+					width: var(--size-text-#{$size});
+					height: var(--space-size);
+					border-top: calc((var(--space-size) - var(--height-text)) / 2 - var(--px)) solid transparent;
+					border-bottom: calc((var(--space-size) - var(--height-text)) / 2 + var(--px)) solid transparent;
+					background: var(--text-bg-color);
+					background-clip: padding-box;
+				}
+			}
+		}
+	}
 }
 
 .avatar {
-    background: var(--color-text-primary);
+	background: var(--color-text-primary);
 
-    &_size {
-        &_m {
-            width: 60px;
-            height: 60px;
-        }
-    }
+	&_size {
+		&_m {
+			width: 60px;
+			height: 60px;
+		}
+	}
 }
 
 .brand-logo {
-    &_name {
-        $colors: 
-            blue #5dcdf9,
-            green #23b324,
-            red #ff3333,
-            purple #c62cff;
+	&_name {
+		$colors: 
+		blue #5dcdf9,
+		green #23b324,
+		red #ff3333,
+		purple #c62cff;
 
-        @each $name, $color in $colors {
-            &_#{$name} {
-                background: $color;
-            }
-        }
-    }
+		@each $name, $color in $colors {
+			&_#{$name} {
+				background: $color;
+			}
+		}
+	}
 
-    &_size {
-        $sizes:
-            xxs 24px,
-            xs 32px,
-            s 40px,
-            m 60px,
-            l 80px;
+	&_size {
+		$sizes:
+		xxs 24px,
+		xs 32px,
+		s 40px,
+		m 60px,
+		l 80px;
 
-        @each $size, $dimensions in $sizes {
-            &_#{$size} {
-                width: $dimensions;
-                height: $dimensions;
-            }
-        }
-    }
+		@each $size, $dimensions in $sizes {
+			&_#{$size} {
+				width: $dimensions;
+				height: $dimensions;
+			}
+		}
+	}
 }
 
 .placeholder {
-    background: var(--color-text-primary);
+	background: var(--color-text-primary);
     
-    &_size {
-        &_m {
-            width: 72px;
-            height: 72px;
-        }
-    }
+	&_size {
+		&_m {
+			width: 72px;
+			height: 72px;
+		}
+	}
 
-    &_view {
-        &_primary {
-            background: var(--color-text-primary);
-        }
-    }
+	&_view {
+		&_primary {
+			background: var(--color-text-primary);
+		}
+	}
 }
 
 .button {
-    background: var(--color-accent);
+	background: var(--color-accent);
 
-    &_size {
-        $sizes:
-            s 24px,
-            m 32px,
-            l 42px,
-            xl 56px,
-            xxl 64px;
+	&_size {
+		$sizes:
+		s 24px,
+		m 32px,
+		l 42px,
+		xl 56px,
+		xxl 64px;
 
-        @each $size, $height in $sizes {
-            &_#{$size} {
-                width: 200px;
-                height: $height;
-            }
-        }
-    }
+		@each $size, $height in $sizes {
+			&_#{$size} {
+				width: 200px;
+				height: $height;
+			}
+		}
+	}
 
-    &_width {
-        &_full {
-            width: 100%;
-        }
-    }
+	&_width {
+		&_full {
+			width: 100%;
+		}
+	}
 }
 
 .input {
-    border: 3px solid var(--color-border);
-    &_size {
-        $sizes:
-            s 24px,
-            m 32px,
-            l 42px,
-            xl 56px,
-            xxl 64px;
+	border: 3px solid var(--color-border);
 
-        @each $size, $height in $sizes {
-            &_#{$size} {
-                height: $height;
-            }
-        }
-    }
+	&_size {
+		$sizes:
+		s 24px,
+		m 32px,
+		l 42px,
+		xl 56px,
+		xxl 64px;
+
+		@each $size, $height in $sizes {
+			&_#{$size} {
+				height: $height;
+			}
+		}
+	}
 }
 
 .image {
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--color-border);
-    background: var(--color-default);
-    background-image: var(--image-placeholder);
-    background-repeat: no-repeat;
-    background-position: center;
+	width: 100%;
+	height: 100%;
+	border: 3px solid var(--color-border);
+	background: var(--color-default);
+	background-image: var(--image-placeholder);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .e-accordion {
-    cursor: pointer;
+	cursor: pointer;
 
-    &__more {
-        display: none;
-    }
+	&__more {
+		display: none;
+	}
 
-    &_active {
-        .e-accordion__more {
-            display: block;
-            --padding-b: 0;
-        }
-    }
+	&_active {
+		.e-accordion__more {
+			display: block;
+		}
+	}
 }

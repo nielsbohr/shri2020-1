@@ -1,21 +1,21 @@
 @use '../base/theme';
 
 .header {
-    display: flex;
-    justify-content: center;
-    padding: var(--space-xxxl) var(--gap);
+	display: flex;
+	justify-content: center;
+	padding: var(--space-xxxl) var(--gap);
 
-    &__content {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1280px;
-    }
+	&__content {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1280px;
+	}
 
-    &__logo {
-        width: 179px;
-        height: 34px;
-        align-self: center;
-        background: var(--color-text-primary);
-    }
+	&__logo {
+		width: 179px;
+		height: 34px;
+		background: var(--color-text-primary);
+	}
 }

@@ -1,104 +1,104 @@
-@use 'theme';
+@use 'theme' as theme;
 
 .layout {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    &__container {
-        background: var(--color-default);
-        width: 100%;
+	&__container {
+		background: var(--color-default);
+		width: 100%;
 
-        &_align {
-            &_center {
-                margin: 0 auto;
-            }
-        }
+		&_align {
+			&_center {
+				margin: 0 auto;
+			}
+		}
 
-        &_size {
-            $sizes:
-                s 920px,
-                m 1280px;
+		&_size {
+			$sizes:
+			s 920px,
+			m 1280px;
 
-            @each $size, $pxs in $sizes {
-                &_#{$size} {           
-                    max-width: $pxs; 
-                }
-            }
-        }
+			@each $size, $pxs in $sizes {
+				&_#{$size} {           
+					max-width: $pxs; 
+				}
+			}
+		}
 
-        &_space-v {
-            &_xxxxl {
-                padding: var(--space-xxxxl) auto var(--space-xxxxl);
-            }
+		&_space-v {
+			&_xxxxl {
+				padding: var(--space-xxxxl) auto var(--space-xxxxl);
+			}
 
-            &_xxxxxl {
-                padding: var(--space-xxxxxl) auto var(--space-xxxxxl);
-            }
-        }
+			&_xxxxxl {
+				padding: var(--space-xxxxxl) auto var(--space-xxxxxl);
+			}
+		}
 
-        &_intent-b {
-            &_xxl {
-                margin-bottom: var(--space-xxl);
-            }
+		&_intent-b {
+			&_xxl {
+				margin-bottom: var(--space-xxl);
+			}
 
-            &_xxxxl {
-                margin-bottom: var(--space-xxxxl);
-            }
-        }
-    }
+			&_xxxxl {
+				margin-bottom: var(--space-xxxxl);
+			}
+		}
+	}
 }
 
 .grid {
-    display: grid;
+	display: grid;
 
-    &_m-columns {
-        &_10 {
-            grid-template-columns: repeat(10, 1fr);
-        }
+	&_m-columns {
+		&_10 {
+			grid-template-columns: repeat(10, 1fr);
+		}
 
-        &_12 {
-            grid-template-columns: repeat(12, 1fr);
-        }
-    }
+		&_12 {
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
 
-    &_col-gap {
-        &_two-thirds {
-            column-gap: calc(var(--gap) * 2 / 3);
-        }
+	&_col-gap {
+		&_two-thirds {
+			column-gap: calc(var(--gap) * 2 / 3);
+		}
 
-        &_full {
-            column-gap: var(--gap);
-        }
+		&_full {
+			column-gap: var(--gap);
+		}
 
-        &_half {
-            column-gap: calc(var(--gap) / 2);
-        }
-    }
+		&_half {
+			column-gap: calc(var(--gap) / 2);
+		}
+	}
 
-    &_row-gap {
-        &_full {
-            row-gap: var(--gap);
-        }
+	&_row-gap {
+		&_full {
+			row-gap: var(--gap);
+		}
 
-        &_half {
-            row-gap: calc(var(--gap) / 2);
-        }
-    }
+		&_half {
+			row-gap: calc(var(--gap) / 2);
+		}
+	}
 
-    &__fraction {
-        &_m-col {
-            $columns: 2 3 4 5 8;
-            @each $col in $columns {
-                &_#{$col} {           
-                    grid-column: auto / span $col;
-                }
+	&__fraction {
+		&_m-col {
+			$columns: 2 3 4 5 8;
+			@each $col in $columns {
+				&_#{$col} {           
+					grid-column: auto / span $col;
+				}
 
-                @media (max-width: breakpoint) {
-                    &_#{$col} {
-                        grid-column: 1 / -1;
-                    }
-                }
-            }
-        }
-    }
+				@media (max-width: theme.$breakpoint) {
+					&_#{$col} {
+						grid-column: 1 / -1;
+					}
+				}
+			}
+		}
+	}
 }

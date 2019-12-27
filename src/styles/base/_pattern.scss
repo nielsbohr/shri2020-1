@@ -1,312 +1,312 @@
 @use 'theme';
 
 .card {
-    position: relative;
+	position: relative;
 
-    &_border {
-        &_all {
-            border: 3px solid var(--color-border);
-        }
-    }
+	&_border {
+		&_all {
+			border: 3px solid var(--color-border);
+		}
+	}
 
-    &_view {
-        &_default {
-            background: var(--color-default);
-        }
-    }
+	&_view {
+		&_default {
+			background: var(--color-default);
+		}
+	}
 
-    &__content {
-        display: flex;
+	&__content {
+		display: flex;
 
-        &_distribute {
-            &_center {
-                justify-content: center;
-            }
-        }
+		&_distribute {
+			&_center {
+				justify-content: center;
+			}
+		}
 
-        &_vertical-align {
-            &_center {
-                align-items: center;
-            }
-        }
+		&_vertical-align {
+			&_center {
+				align-items: center;
+			}
+		}
 
-        &_space-a {
-            @each $size in m, l, xl, xxl, xxxl {
-                &_#{$size} {           
-                    padding: var(--space-#{$size}); 
-                }
-            }
-        }
-    }
+		&_space-a {
+			@each $size in m, l, xl, xxl, xxxl {
+				&_#{$size} {           
+					padding: var(--space-#{$size}); 
+				}
+			}
+		}
+	}
 
-    &__footer {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
+	&__footer {
+		position: absolute;
+		bottom: 0;
 
-        &_distribute {
-            &_between {
-                justify-content: space-between;
-            }
+		&_distribute {
+			&_between {
+				justify-content: space-between;
+			}
 
-            @each $type in center, right {
-                &_#{$type} {           
-                    justify-content: $type;
-                }
-            }
-        }
+			@each $type in center, right {
+				&_#{$type} {           
+					justify-content: $type;
+				}
+			}
+		}
 
-        &_vertical-align {
-            @each $type in center, top, bottom {
-                &_#{$type} {           
-                    align-items: $type;
-                }
-            }
-        }
+		&_vertical-align {
+			@each $type in center, top, bottom {
+				&_#{$type} {           
+					align-items: $type;
+				}
+			}
+		}
 
-        &_space-a {
-            @each $size in m, l, xl, xxl {
-                &_#{$size} {           
-                    padding: var(--space-#{$size});
-                }
-            }
-        }
-    }
+		&_space-a {
+			@each $size in m, l, xl, xxl {
+				&_#{$size} {           
+					padding: var(--space-#{$size});
+				}
+			}
+		}
+	}
 }
 
 .form {
-    &_border {
-        &_all {
-            border: 3px solid var(--color-border);
-        }
-    }
+	&_border {
+		&_all {
+			border: 3px solid var(--color-border);
+		}
+	}
 
-    &_view {
-        &_default {
-            background: var(--color-default);
-        }
-    }
+	&_view {
+		&_default {
+			background: var(--color-default);
+		}
+	}
 
-    &__item {
-        display: flex;
+	&__item {
+		display: flex;
 
-        &_border {
-            &_bottom {
-                &:last-child {
-                    border: 0;
-                }
-            }
-        }
+		&_border {
+			&_bottom {
+				&:last-child {
+					border: 0;
+				}
+			}
+		}
 
-        &_distribute {
-            &_between {
-                justify-content: space-between;
-            }
-        }
+		&_distribute {
+			&_between {
+				justify-content: space-between;
+			}
+		}
 
-        &_vertical-align {
-            &_center {
-                align-items: center;
-            }
-        }
+		&_vertical-align {
+			&_center {
+				align-items: center;
+			}
+		}
 
-        &_indent-b {
-            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
-                &_#{$size} {
-                    margin-bottom: var(--space-#{$size});
-                }
-            }
-        }
+		&_indent-b {
+			@each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
+				&_#{$size} {
+					margin-bottom: var(--space-#{$size});
+				}
+			}
+		}
 
-        &_space-h {
-            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
-                &_#{$size} {
-                    padding-right: var(--space-#{$size});
-                    padding-left: var(--space-#{$size});
-                }
-            }
-        }
+		&_space-h {
+			@each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
+				&_#{$size} {
+					padding-right: var(--space-#{$size});
+					padding-left: var(--space-#{$size});
+				}
+			}
+		}
 
-        &_space-v {
-            @each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
-                &_#{$size} {
-                    padding-top: var(--space-#{$size});
-                    padding-bottom: var(--space-#{$size});
-                }
-            }
-        }
-    }
+		&_space-v {
+			@each $size in xxxs, xxs, s, m, l, xl, xxl, xxxl, xxxxl {
+				&_#{$size} {
+					padding-top: var(--space-#{$size});
+					padding-bottom: var(--space-#{$size});
+				}
+			}
+		}
+	}
 
-    $label: 35;
+	$label: 35;
 
-    &__label {
-        &_width {
-            &_default {
-                flex: $label / 100;
-            }
-        }
-    }
+	&__label {
+		&_width {
+			&_default {
+				flex: $label / 100;
+			}
+		}
+	}
 
-    &__control {
-        flex: (100 - $label) / 100;
-    }
+	&__control {
+		flex: (100 - $label) / 100;
+		justify-content: flex-end;
+	}
 }
 
-.informer {
-    display: flex;
-     
-    &_border {
-        &_all {
-            border: 3px solid var(--color-border);
-        }
-    }
+.informer {     
+	&_border {
+		&_all {
+			border: 3px solid var(--color-border);
+		}
+	}
 
-    &_view {
-        &_default {
-            background: var(--color-default);
-        }
-    }
+	&_view {
+		&_default {
+			background: var(--color-default);
+		}
+	}
 
-    &__content, &__action {
-        &_distribute {
-            &_default {
-                justify-content: flex-start;
-            }
+	&__content, &__action {
+		display: flex;
+        
+		&_distribute {
+			&_default {
+				justify-content: flex-start;
+			}
 
-            &_between {
-                justify-content: space-between;
-            }
+			&_between {
+				justify-content: space-between;
+			}
 
-            &_center {
-                justify-content: center;
-            }
-        }
+			&_center {
+				justify-content: center;
+			}
+		}
 
-        &_space-a {
-            @each $size in xl, xxl {
-                &_#{$size} {
-                    padding: var(--space-#{$size});
-                }
-            }
-        }
-    }
+		&_space-a {
+			@each $size in xl, xxl {
+				&_#{$size} {
+					padding: var(--space-#{$size});
+				}
+			}
+		}
+	}
 }
 
 .list {
-    &_border {
-        &_all {
-            border: 3px solid var(--color-border);
-        }
-    }
+	&_border {
+		&_all {
+			border: 3px solid var(--color-border);
+		}
+	}
 
-    &_view {
-        &_default {
-            background: var(--color-default);
-        }
-    }
+	&_view {
+		&_default {
+			background: var(--color-default);
+		}
+	}
 
-    &__item {
-        display: flex;
-        &_border {
-            &_bottom {
-                border-bottom: 3px solid var(--color-border);
+	&__item {
+		display: flex;
+        
+		&_border {
+			&_bottom {
+				border-bottom: 3px solid var(--color-border);
 
-                &:last-child {
-                    border: 0;
-                }
-            }
+				&:last-child {
+					border: 0;
+				}
+			}
 
-            &_top {
-                border-top: 3px solid var(--color-border);
+			&_top {
+				border-top: 3px solid var(--color-border);
 
-                &:first-child {
-                    border: 0;
-                }
-            }
-        }
+				&:first-child {
+					border: 0;
+				}
+			}
+		}
 
-        &_distribute {
-            &_between {
-                justify-content: space-between;
-            }
-        }
+		&_distribute {
+			&_between {
+				justify-content: space-between;
+			}
+		}
 
-        &_vertical-align {
-            &_center {
-                align-items: center;
-            }
-        }
+		&_vertical-align {
+			&_center {
+				align-items: center;
+			}
+		}
 
-        &_indent-t {
-            &_m {
-                margin-top: var(--space-m);
-            }
-        }
+		&_indent-t {
+			&_m {
+				margin-top: var(--space-m);
+			}
+		}
 
-        &_indent-b {
-            @each $size in s, m, l, xl {
-                &_#{$size} {
-                    margin-bottom: var(--space-#{$size});
-                }
-            }
-        }
+		&_indent-b {
+			@each $size in s, m, l, xl {
+				&_#{$size} {
+					margin-bottom: var(--space-#{$size});
+				}
+			}
+		}
 
-        &_space-b {
-            &_s {
-                padding-bottom: var(--space-s);
-            }
-        }
+		&_space-b {
+			&_s {
+				padding-bottom: var(--space-s);
+			}
+		}
 
-        &_space-a {
-            &_m {
-                padding: var(--space-m);
-            }
-        }
-    }
+		&_space-a {
+			&_m {
+				padding: var(--space-m);
+			}
+		}
+	}
 }
 
 .icon-plus {
-    &_vertical-align {
-        &_center {
-            align-items: center
-        }
-    }
+	display: flex;
+    
+	&_vertical-align {
+		&_center {
+			align-items: center
+		}
+	}
 
-    &__icon {
-        &_indent-r {
-            @each $size in s, m {
-                &_#{$size} {
-                    margin-right: var(--space-#{$size});
-                }
-            }
-        }
+	&__icon {
+		&_indent-r {
+			@each $size in s, m {
+				&_#{$size} {
+					margin-right: var(--space-#{$size});
+				}
+			}
+		}
 
-        &_indent-l {
-            &_l {
-                margin-left: var(--space-l);
-            }
-        }
-    }
+		&_indent-l {
+			&_l {
+				margin-left: var(--space-l);
+			}
+		}
+	}
 }
 
 .section {
-    &_indent-b {
-        @each $size in xxl, xxxxl {
-            &_#{$size} {
-                margin-bottom: var(--space-#{$size});
-            }
-        }
-    }
+	&_indent-b {
+		@each $size in xxl, xxxxl {
+			&_#{$size} {
+				margin-bottom: var(--space-#{$size});
+			}
+		}
+	}
 
-    &_space-v {
-        @each $size in xxl, xxxxl {
-            &_#{$size} {
-                padding-top: var(--space-#{$size});
-                padding-bottom: var(--space-#{$size});
-            }
-        }
-    }
+	&_space-v {
+		@each $size in xxl, xxxxl {
+			&_#{$size} {
+				padding-top: var(--space-#{$size});
+				padding-bottom: var(--space-#{$size});
+			}
+		}
+	}
 }

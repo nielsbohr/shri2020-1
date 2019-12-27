@@ -1,24 +1,22 @@
 @use '../base/theme';
 
 .warning {
-    min-height: 335px;
-    flex-direction: column;
+	display: flex;
+	height: 100%;
+	min-height: 335px;
+	flex-direction: column;
+	justify-content: space-between;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
+	&__content {
+		display: flex;
+		flex-direction: column;
 
-        .placeholder {
-            margin: var(--space-m) auto;
-        }
-    }
+		.placeholder {
+			margin: var(--space-m) auto;
+		}
+	}
 
-    &__button-wrapper {
-        display: flex;
-        margin-top: 5px;
-
-        @media (max-width: screen-m) {
-            margin-top: 0;   
-        } 
-    }
+	&__button-wrapper {
+		display: flex;
+	}
 }

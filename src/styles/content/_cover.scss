@@ -1,18 +1,18 @@
 @use '../base/theme';
 
 .cover {
-    min-height: 472px;
+	min-height: 472px;
 
-    &__info {
-        flex-direction: column;
-    }
+	&__info {
+		flex-direction: column;
+	}
 
-    &__preview {
-        margin-bottom: var(--space-l);
+	&__preview {
+		margin-bottom: var(--space-l);
+		height: 180px;
+	}
 
-        .image {
-            border-width: 3px;
-            height: 174px;
-        }
-    }
+	&__footer {
+		width: 100%;
+	}
 }

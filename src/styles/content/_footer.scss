@@ -1,14 +1,14 @@
 @use '../base/theme';
 
 .footer {
-    display: flex;
-    justify-content: center;
-    padding: var(--space-xxxl) var(--gap);
+	display: flex;
+	justify-content: center;
+	padding: var(--space-xxxl) var(--gap);
 
-    &__content {
-        flex: 1;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1280px;
-    }
+	&__content {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+		max-width: 1280px;
+	}
 }

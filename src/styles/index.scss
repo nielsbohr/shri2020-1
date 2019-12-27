@@ -17,13 +17,13 @@
 @include normalize.normalize();
 
 html {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-    box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .page {
-    background: var(--color-default);
+	background: var(--color-default);
 }
