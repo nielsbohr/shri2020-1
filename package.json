@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "npx webpack-dev-server --env index.js",
+    "dev": "npx webpack-dev-server --env dev.js",
     "sl": "npx stylelint src/styles/**/*.scss",
     "sl-fix": "npx stylelint src/styles/**/*.scss --fix",
     "eslint": "npx eslint src/js/index.js",
