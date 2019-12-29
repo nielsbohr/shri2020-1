@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "npx webpack-dev-server --env dev.js",
+    "dev": "npx webpack-dev-server --config webpack.dev.js",
     "sl": "npx stylelint src/styles/**/*.scss",
     "sl-fix": "npx stylelint src/styles/**/*.scss --fix",
     "eslint": "npx eslint src/js/index.js",
     "eslint-fix": "npx eslint src/js/index.js --fix",
-    "build": "npx webpack --env.production index.js"
+    "build": "npx webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
     "express": "^4.17.1",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
     "normalize-scss": "^7.0.1",
