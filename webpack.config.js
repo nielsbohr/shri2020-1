@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sass = require('sass');
 const path = require('path');
@@ -6,6 +7,7 @@ module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'build/'),
+    publicPath: '/',
     filename: 'script.js',
   },
   module: {
@@ -33,6 +35,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       filename: 'style.css',
       ignoreOrder: false,

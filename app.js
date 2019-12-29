@@ -4,8 +4,9 @@ const middleware = require('webpack-dev-middleware');
 const path = require('path');
 const fs = require('fs');
 const templater = require('./templater');
+const config = require('./webpack.config.js');
 
-const compiler = webpack(require('./webpack.config.js'));
+const compiler = webpack(config);
 
 const app = express();
 
@@ -13,9 +14,12 @@ app.use('/static', express.static(`${__dirname}/build`));
 
 app.use(
   middleware(compiler, {
-    lazy: false,
+    writeToDisk: true,
+    publicPath: config.output.publicPath,
   }),
 );
+
+app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('/index|product', (req, res) => {
   const page = req.path.replace('/', '');
@@ -29,11 +33,11 @@ app.get('/index|product', (req, res) => {
     <!doctype html>
     <html>
         <head>
-            <link rel="stylesheet" href="/static/style.css">
+          <link rel="stylesheet" href="/static/style.css">
         </head>
         <body>
-            ${contentHTML}
-            <script type="text/javascript" src="/static/script.js"></script>
+          ${contentHTML}
+          <script type="text/javascript" src="/static/script.js"></script>
         </body>
     </html>`;
 

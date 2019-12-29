@@ -9,6 +9,7 @@
     "sl": "npx stylelint src/styles/**/*.scss",
     "sl-fix": "npx stylelint src/styles/**/*.scss --fix",
     "eslint": "npx eslint src/js/index.js",
+    "eslint-fix": "npx eslint src/js/index.js --fix",
     "build": "npx webpack --env.production index.js"
   },
   "author": "",
@@ -38,7 +39,8 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.9.0",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "browserslist": [
     "last 2 Chrome versions",
