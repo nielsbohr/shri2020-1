@@ -1,2 +1,2 @@
 node_modules/*
-templater.js
+src/js/templater.js

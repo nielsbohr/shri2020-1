@@ -8,8 +8,8 @@
     "dev": "npx webpack-dev-server --config webpack.dev.js",
     "sl": "npx stylelint src/styles/**/*.scss",
     "sl-fix": "npx stylelint src/styles/**/*.scss --fix",
-    "eslint": "npx eslint src/js/index.js",
-    "eslint-fix": "npx eslint src/js/index.js --fix",
+    "eslint": "npx eslint *.js",
+    "eslint-fix": "npx eslint *.js --fix",
     "build": "npx webpack --config webpack.prod.js"
   },
   "author": "",

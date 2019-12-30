@@ -3,7 +3,8 @@ const sass = require('sass');
 const path = require('path');
 
 module.exports = {
-  entry: './index.js',
+  mode: 'production',
+  entry: './prod.js',
   output: {
     path: path.resolve(__dirname, 'build/'),
     filename: 'script.js',
@@ -11,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -38,14 +39,4 @@ module.exports = {
       ignoreOrder: false,
     }),
   ],
-  watch: true,
-  devServer: {
-    contentBase: path.join(__dirname, 'build/'),
-    compress: true,
-    port: 9000,
-    historyApiFallback: {
-      index: 'index.html',
-      product: 'index.html',
-    },
-  },
 };

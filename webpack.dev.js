@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const sass = require('sass');
 const path = require('path');
 
@@ -8,16 +7,14 @@ module.exports = {
   entry: './dev.js',
   output: {
     path: path.resolve(__dirname, 'build/'),
-    filename: 'script.js',
   },
   module: {
     rules: [
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
-          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -34,20 +31,17 @@ module.exports = {
       },
     ],
   },
-  watch: true,
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-      ignoreOrder: false,
+    new HtmlWebpackPlugin({
+      title: 'Dev',
+      template: 'build/index.html',
     }),
-    new HtmlWebpackPlugin()
   ],
+  watch: true,
   devServer: {
     contentBase: path.join(__dirname, 'build/'),
     compress: true,
     port: 9000,
-    historyApiFallback: {
-      product: 'index.html',
-    },
+    historyApiFallback: true,
   },
 };
