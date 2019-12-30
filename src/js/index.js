@@ -18,31 +18,30 @@ function changeTheme(event) {
     }
   }
 
-
-  const path = event.path || (event.composedPath && event.composedPath());
-  for (let i = 0; i < path.length; i += 1) {
-    const { classList } = path[i];
-    if (classList && classList.contains('onoffswitch')) {
-      if (classList.contains('onoffswitch_checked')) {
-        classList.remove('onoffswitch_checked');
+  let { target } = event;
+  while (target.parentNode !== null) {
+    if (target.classList && target.classList.contains('onoffswitch')) {
+      if (target.classList.contains('onoffswitch_checked')) {
+        target.classList.remove('onoffswitch_checked');
       } else {
-        classList.add('onoffswitch_checked');
+        target.classList.add('onoffswitch_checked');
       }
     }
+    target = target.parentNode;
   }
 }
 
 function accordion(event) {
-  const path = event.path || (event.composedPath && event.composedPath());
-  for (let i = 0; i < path.length; i += 1) {
-    const { classList } = path[i];
-    if (classList && classList.contains('e-accordion')) {
-      if (classList.contains('e-accordion_active')) {
-        classList.remove('e-accordion_active');
+  let { target } = event;
+  while (target.parentNode !== null) {
+    if (target.classList && target.classList.contains('e-accordion')) {
+      if (target.classList.contains('e-accordion_active')) {
+        target.classList.remove('e-accordion_active');
       } else {
-        classList.add('e-accordion_active');
+        target.classList.add('e-accordion_active');
       }
     }
+    target = target.parentNode;
   }
 }
 
